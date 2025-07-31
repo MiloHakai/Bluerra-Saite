@@ -1,6 +1,6 @@
 # IMPORTANT
 
-I hearby admit that the work is inspired hugely by SpectraPulse as cited above and that this is a redesign of the repo I already own.
+I hearby admit that the work is inspired hugely by spectrapulse as cited below and that this is a redesign of the repo I already own.
 If you see this and you're not okay with it, please ask me and I will remove the repository IMMEDIATELY.
 
 # Bluerra Personal Site
