@@ -45,11 +45,35 @@
       color: var(--text-dark);
       transition: background 0.4s ease, color 0.4s ease;
       position: relative;
+      /* GIF background setup */
+      background-image: url('./background.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Dark overlay to make text readable */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 35, 50, 0.85); /* Dark blue overlay with transparency */
+      z-index: 0;
+      pointer-events: none;
     }
 
     [data-theme="light"] body {
       background-color: var(--bg-light);
       color: var(--text-light);
+    }
+
+    /* Light theme overlay - reduced opacity for better GIF visibility */
+    [data-theme="light"] body::before {
+      background: rgba(232, 244, 248, 0.65); /* Reduced from 0.90 to 0.65 for better visibility */
     }
 
     /* Alternative approach with individual border segments */
@@ -590,7 +614,7 @@
       <p>Know more about <a href="./lore.html" class="nav-link">the lore</a></p>
     </div>
 
-     <div class="icons">
+    <div class="icons">
       <a href="https://discord.com/users/1027154532070850622/" title="Discord" target="_blank"><i class="fab fa-discord"></i></a>
       <a href="https://open.spotify.com/artist/3WciAVM3DxjIWwV3aSugVa?si=S43FoBBCRRi9NMNqg-lYdA" title="Spotify" target="_blank"><i class="fab fa-spotify"></i></a>
       <a href="https://www.tiktok.com/@bluerra" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -639,7 +663,7 @@
         easterEggEl.classList.remove('warning');
       } else if (nameClickCount >= maxClicks) {
         // Too many clicks - show the red warning
-        easterEggEl.textContent = 'I will cut you down.';
+        easterEggEl.textContent = 'I warned you. Don\'t turn back.';
         easterEggEl.classList.add('warning');
       }
       
