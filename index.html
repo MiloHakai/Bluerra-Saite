@@ -607,11 +607,10 @@
   <div class="container">
     <h1 id="username" class="wave-text" onclick="handleNameClick()">Bluerra-Sai</h1>
     <p id="description">Visual artist and Musician.</p>
-    <p id="easter-egg-text" class="easter-egg-message" style="display: none;">Hey! Stop that...</p>
+    <p id="easter-egg-text" class="easter-egg-message" style="display: none;">boop</p>
     
     <div class="navigation-links">
-      <p>Check my portfolio <a href="./portfolio.html" class="nav-link">here</a>!</p>
-      <p>Know more about <a href="./lore.html" class="nav-link">the lore</a></p>
+
     </div>
 
     <div class="icons">
@@ -659,11 +658,11 @@
         // First click - show the warning message
         descriptionEl.style.display = 'none';
         easterEggEl.style.display = 'block';
-        easterEggEl.textContent = 'Hey! Stop that...';
+        easterEggEl.textContent = 'boop!';
         easterEggEl.classList.remove('warning');
       } else if (nameClickCount >= maxClicks) {
         // Too many clicks - show the red warning
-        easterEggEl.textContent = 'I will cut you down.';
+        easterEggEl.textContent = 'Okay buddy, that\'s enough!';
         easterEggEl.classList.add('warning');
       }
       
